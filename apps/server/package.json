@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.10",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:push": "drizzle-kit push:pg",
+    "db:view": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^0.7.0",
+    "@elysiajs/static": "^0.7.0",
+    "@elysiajs/swagger": "^0.7.1",
+    "@planetscale/database": "^1.11.0",
+    "@t3-oss/env-core": "^0.7.1",
+    "drizzle-orm": "^0.28.6",
+    "elysia": "^0.7.6",
+    "postgres": "^3.4.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "bun-types": "^1.0.2",
+    "drizzle-kit": "^0.19.13",
+    "pg": "^8.11.3"
+  },
+  "module": "src/index.ts",
+  "bun-create": {
+    "start": "bun run src/index.ts"
+  }
+}
