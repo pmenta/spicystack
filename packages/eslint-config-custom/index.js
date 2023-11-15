@@ -5,4 +5,9 @@ module.exports = {
     "react/jsx-key": "off",
     "turbo/no-undeclared-env-vars": "off",
   },
+  parserOptions: {
+    babelOptions: {
+      presets: [require.resolve("next/babel")],
+    },
+  },
 };
