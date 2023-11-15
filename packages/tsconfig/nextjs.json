@@ -4,7 +4,11 @@
   "extends": "./base.json",
   "compilerOptions": {
     "target": "es5",
-    "lib": ["DOM", "DOM.Iterable", "esnext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -15,8 +19,27 @@
     "module": "esnext",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@ui/*": [
+        "../../packages/ui/*"
+      ],
+      "@ui/components/*": [
+        "../../packages/ui/components/ui/*"
+      ],
+      "@ui/components/ui/*": [
+        "../../packages/ui/components/ui/*"
+      ]
+    }
   },
-  "include": ["src", "next-env.d.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src",
+    "next-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
